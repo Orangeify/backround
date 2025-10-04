@@ -1,9 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Combined Example</title>
-  <link rel="stylesheet" href="index.css">
+  <style>
+  .container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      to bottom,
+      #291603 0%,
+      #291603 40%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(to right, #FD9C09, #A86B0E);
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(90deg, #A19A90 1px, transparent 1px);
+  background-size: 50px 100%;
+  pointer-events: none;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+}
+  <style>
 </head>
 <body>
   <div class="container"></div>
